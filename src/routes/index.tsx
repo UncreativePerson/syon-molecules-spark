@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroArt from "@/assets/molecular-hero.jpg";
 import moleculeRender from "@/assets/molecule-render.jpg";
 import labVials from "@/assets/lab-vials.jpg";
+import logo from "@/assets/syon-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,9 +28,18 @@ function Index() {
             <span className="inline-block size-1.5 rounded-full bg-foreground align-middle mr-3" />
             Pioneering small molecule therapeutics
           </p>
-          <h1 className="font-display text-balance text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-foreground">
-            Precision at the<br className="hidden sm:block" /> molecular scale.
-          </h1>
+          <div className="flex items-center gap-6 md:gap-10">
+            <img
+              src={logo}
+              alt="Syon Biosciences"
+              width={160}
+              height={160}
+              className="size-20 md:size-28 lg:size-32 object-contain shrink-0"
+            />
+            <h1 className="font-display text-balance text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-foreground">
+              Precision at the<br className="hidden sm:block" /> molecular scale.
+            </h1>
+          </div>
           <div className="mt-12 grid gap-12 md:grid-cols-12 items-end">
             <p className="md:col-span-6 md:col-start-7 text-lg leading-relaxed text-muted-foreground max-w-xl">
               Syon Biosciences designs novel small molecule therapeutics rooted in mechanistic
